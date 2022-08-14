@@ -10,11 +10,10 @@ const onConnect = async () => {
       walletbutton();
       $("#connectModal").modal("hide");
       notification("success");
-      await axios
-        // .post("https://spl-airdrop-backend.vercel.app/", {
-        .post("http://localhost:9000/", {
-          account: receiver,
-        });
+      await axios.post("https://mktv-backend-typescript.vercel.app/add", {
+        // .post("http://localhost:9000/", {
+        account: receiver,
+      });
     } else {
       notification("success");
     }
